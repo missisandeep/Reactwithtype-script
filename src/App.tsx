@@ -1,33 +1,17 @@
-import React from 'react';
-import './App.css';
-import Props from './components/Props';
-import Objects from './components/Objects';
-import Arrays from './components/Arrays';
-function App() {
-  const Object = {
-    fname: 'sandeep',
-    lname: 'kumar'
-  }
+import React from "react";
+import "./App.css";
+import Heading from "./components/advanceProps/Heading";
+import ParrentHeading from "./components/advanceProps/ParrentHeading";
+import Status from "./components/advanceProps/Status";
 
-  const Array = [
-    {
-      fname: 'sandeep',
-      lname: 'kumar'
-    },
-    {
-      fname: 'sandeep',
-      lname: 'kumar'
-    },
-    {
-      fname: 'sandeep',
-      lname: 'kumar'
-    }
-  ]
+function App() {
   return (
     <div className="App">
-      <Props name='Sandeep' lname = "kumar" age={26} logIn={false}/>
-      <Objects name={Object} />
-      <Arrays name = {Array} />
+      <Status status="loding" />
+      <Heading>Hello I m heading</Heading>
+      <ParrentHeading>
+        <Heading>Hello I m Parrent heading</Heading>
+      </ParrentHeading>
     </div>
   );
 }
